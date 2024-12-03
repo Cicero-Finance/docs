@@ -31,7 +31,7 @@
 			"group": "Mechanics",
 			"pages": ["mechanics/pools", {
                 "group": "Types",
-                "pages": ["ilp", "sp", "jt"]
+                "pages": ["mechanics/pool/ilp", "mechanics/pool/sp", "mechanics/pool/jt"]
             	}, "mechanics/loan", "mechanics/staking", "mechanics/governance", "mechanics/rewards"]
 		},
 		{
