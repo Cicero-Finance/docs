@@ -30,8 +30,8 @@
 		{
 			"group": "Mechanics",
 			"pages": ["mechanics/pools", {
-                "group": "Test nested group",
-                "pages": ["development"]
+                "group": "Types",
+                "pages": ["ilp", "sp", "jt"]
             	}, "mechanics/loan", "mechanics/staking", "mechanics/governance", "mechanics/rewards"]
 		},
 		{
