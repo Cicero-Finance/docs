@@ -7,9 +7,9 @@
 	},
 	"favicon": "/favicon.svg",
 	"colors": {
-		"primary": "#34D399",
-		"light": "#386A58",
-		"dark": "#34D399",
+		"primary": "#386A58",
+		"light": "#34D399",
+		"dark": "#386A58",
 		"anchors": {
 			"from": "#34D399",
 			"to": "#34D399"
@@ -26,6 +26,18 @@
 		{
 			"group": "Get Started",
 			"pages": ["introduction"]
+		},
+		{
+			"group": "Mechanics",
+			"pages": ["mechanics/pools"],
+			"pages": ["mechanics/loan"],
+			"pages": ["mechanics/staking"],
+			"pages": ["mechanics/governance"],
+			"pages": ["mechanics/rewards"]
+		},
+		{
+			"group": "Developer Docs",
+			"pages": ["developers/contracts"]
 		}
 	],
 	"footerSocials": {}
