@@ -4,3 +4,35 @@ description: "Earn rewards and participate in the protocol Governance"
 sidebarTitle: "Staking"
 icon: "layer-group"
 ---
+
+Staking in Cicero is operated by ILP (Insurance Liquidity Pool).
+
+## Staking
+
+When staking, ILP provides the users with ATTICUS tokens (governance tokens) in exchange for staked CICERO tokens. The received ATTICUS token is not tradable and represents directly the voting power of the member. To prevent governance manipulations, the ATTICUS token balance depreciates with time, where the closer the user gets to their staking end, the less governance power they possess. 
+
+### Staking properties
+
+* Staking Token: CICERO
+
+* Governance Token (proof of staking): ATTICUS
+
+* Staking lock-in period: up to 48 months
+
+* Can Stake: Anyone owning CICERO tokens
+
+* Size: ILP has no staking size limit
+
+* Risk: If deposited USDC from ILP is not enough to cover the default loss, staked CICERO tokens will be used.
+
+* Returns: Revenue comes in the form of ILP fees (origination and penalties) and repayments
+
+### Rewards
+
+For staking, the protocol rewards the users with additional CICERO tokens and a share of the protocol fees. Rewards in CICERO tokens are distributed at a fixed rate (rewardsSpeed) defined by the Governance and is split between all staking participants proportionally to their staked tokens amount. The following formula is used to calculate an individual user reward:
+
+TBD formula
+
+## Unstake
+
+Depending on the unstaking period, the users can wait for their tokens to be unlocked or request unstaking. Submitting a request to unstake will remove the user’s voting power proportional to the unstaked tokens. Additionally, the tokens will only be released after the unstaking duration. Unlocked tokens that have reached staking maturity do not provide voting power and can be claimed anytime.

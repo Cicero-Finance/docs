@@ -7,6 +7,10 @@ icon: "shield"
 
 The ILP is where protocol participants stake their CICERO tokens to become DAO members. Additionally, to staking, participants can also deposit USDC and earn a yield on it. ILP earns by collecting protocol fees and its purpose is to insure the SP during default.
 
+## Dynamic ILP Insurance Cover
+
+ILP insures only the ST. The insurance process is triggered automatically when a loan is defaulted. The first pool to be liquidated is the JT. If the JT assets don’t cover the entire loss amount, deposited USDC from the ILP is used. If the deposited USDC is also not enough to cover the loss, staked CICERO tokens will be sold up to 70% of the pool. Finally, if the loss is not covered, it will be acknowledged by the ST. 
+
 ## Depositing
 
 When depositing USDC, the ILP returns an LP token (ILP Token) that bears the interest of the pool yield. In addition, the lender also receives ATTICUS tokens at a fixed rate. Lending USDC tokens is required to insure potential losses during a default period and decrease the selling pressure of CICERO tokens. Deposited USDCs are locked for a period of up to 48 months. 
