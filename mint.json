@@ -29,7 +29,10 @@
 		},
 		{
 			"group": "Mechanics",
-			"pages": ["mechanics/pools", "mechanics/loan", "mechanics/staking", "mechanics/governance", "mechanics/rewards"]
+			"pages": ["mechanics/pools", {
+                "group": "Test nested group",
+                "pages": ["development"]
+            	}, "mechanics/loan", "mechanics/staking", "mechanics/governance", "mechanics/rewards"]
 		},
 		{
 			"group": "Developer Docs",
