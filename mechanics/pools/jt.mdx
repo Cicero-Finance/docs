@@ -4,3 +4,37 @@ description: "JT Pool: Initiating Loans, Ensuring Liquidity, and Safeguarding Po
 sidebarTitle: "Junior Tranche"
 icon: "diamond"
 ---
+
+JT pool is used to kickstart the loan and cover the initial liquidity required for origination. Once a loan is created and approved, the minimum target of 20% of the loan size is immediately provided by JT with the ST following up with the remaining 80%. Funds are automatically transferred from the vault to the borrower's address. The loan can’t be approved if there is not enough liquidity to cover it and preserve the health of individual pools.
+
+## Depositing
+
+Lenders deposit USDC through the JT pool and receive LP Token (JT Token) in exchange at the current exchange rate. Deposited liquidity is locked for up to 24 months in the vault without the possibility of withdrawing before the maturity date.
+
+### Deposit properties
+
+* Deposit Token: USDC
+
+* LP Token: ST Token (ERC-20)
+
+* USDC deposit lock-in period: up to 24 months
+
+* Can deposit: Everyone can deposit in the JT
+
+* Size: No upper limit
+
+* Risk: In case of a default, JT is first used to cover losses (first loss capital). The loss is proportional to the 20% of the funds provided to originate the defaulted loan. It is the last pool to be paid back.
+
+* Returns: The JT has the highest returns per USDC deposited.
+
+### Interest accrual
+
+The JT pool interest rate is calculated from the proportion of interest allocated for it in the vault and the repayment interest. Thus JT pool is being limited by the governance on the amount of interest collected. 
+
+The lenders accrue interest on their deposit every second proportionally to their position. The following formula is used to calculate the interest accrued for a single lender:
+
+TBD formula.
+
+## Withdrawal
+
+Withdrawal is only possible after the deposit reaches the maturity date. Once the maturity is reached, lenders can withdraw their deposits anytime. Withdrawals are subject to available liquidity. Withdrawing requires the lender to return their JT Tokens at the latest exchange rate. JT is immediately burned and USDC is returned to the lenders’ address.

@@ -4,3 +4,38 @@ description: "ILP: Stake to Join DAO, Earn on USDC, Insure SP with Protocol Fees
 sidebarTitle: "Insurance Liquidity Pool"
 icon: "shield"
 ---
+
+The ILP is where protocol participants stake their CICERO tokens to become DAO members. Additionally, to staking, participants can also deposit USDC and earn a yield on it. ILP earns by collecting protocol fees and its purpose is to insure the SP during default.
+
+## Depositing
+
+When depositing USDC, the ILP returns an LP token (ILP Token) that bears the interest of the pool yield. In addition, the lender also receives ATTICUS tokens at a fixed rate. Lending USDC tokens is required to insure potential losses during a default period and decrease the selling pressure of CICERO tokens. Deposited USDCs are locked for a period of up to 48 months. 
+
+### Deposit properties
+
+* Deposit Token: USDC
+
+* LP Token: IN (ERC-20)
+
+* Governance Token: ATTICUS
+
+* USDC deposit lock-in period: up to 48 months
+
+* Can deposit: Anyone. ILP is not restricted to any protocol participant. 
+
+* Size: The ILP has no size limit. It should maintain an ideal ratio of 50% of the USDC deposited in the ST (but realistically only 1/10th of the ST). If the rate is not maintained, it’s up to the Governance how to adjust the rate.
+
+* Risk: ILP insures the ST in case of defaults by providing partial repayments to lenders.
+
+* Returns: Revenue comes in the form of ILP fees (origination and penalties) and repayments. ILP offers better returns per USDC invested compared to ST and less than the JT.
+
+### Interest accrual
+
+ILP Lenders accrue interest every second proportional to their deposited USDC amount. The interest in the ILP is diluted between other lenders. The following formula is used to calculate the interest rate:
+
+TBD Formula
+
+## Withdrawal
+
+Lenders can only withdraw their USDC after the lock period reaches maturity. Ideally, a proportion of 80:20 (USDC:CICERO) tokens should be maintained for a healthy ILP operation. 
+
