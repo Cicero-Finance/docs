@@ -1,0 +1,44 @@
+---
+title: "Senior Tranche Pool"
+description: "ST: Post-JT Loan Coverage, ILP Backed, Safe returns"
+sidebarTitle: "Senior Tranche"
+icon: "certificate"
+---
+
+The ST is a liquidity pool that covers the extra principal (80% of the loan size) required for loan origination once the JT target (20% of the loan size) is met. All deposits in the ST are insured by the ILP. 
+
+The lenders' and borrowers’ activity affects the ST pool utilization rate. The pool is operational when the utilization rate is below 90%. The remaining 10% are always kept liquid. Lenders can withdraw up to 8% of the remaining assets. When 98% utilization is reached, the ST enters a warning state where withdrawal requests are not processed anymore until new liquidity is either deposited or repaid.
+
+## Depositing
+
+When depositing USDC tokens through ST, the lender will lock-in their assets for a certain period and receive in exchange the LP tokens (ST Token) calculated to the current tranche exchange rate. All deposits are automatically proxied to the vault.
+
+The exchange rate is unique per pool as it reflects the accrued pool interest for deposited positions. The formula for the exchange rate is presented below:
+
+TBD formula
+
+### Deposit properties
+
+* Deposit Token: USDC
+* LP Token: ST Token (ERC-20)
+* USDC deposit lock-in period: up to 24 months
+* Can deposit: Everyone can deposit in the ST
+* Size: No limit
+* Risk: If ILP can’t insure losses anymore, the loss is being acknowledged by the ST
+* Returns: ST is paid back principal and interest before the JT and before the ILP fees. Lowest returns per USDC deposited
+
+### Interest accrual
+
+The ST pool interest rate is calculated based on the proportion of interest allocated for it in the vault. This means that the pool is limited by the governance on how much interest it can receive from the loans. After repayment, accrued interest funds are stored in the vault.
+
+Interest on lender deposits is accrued proportionally to the amount of deposited tokens. Accrued interest is diluted between all lenders. The following formula is used to calculate the accrued interest of a single lender:
+
+TBD formula
+
+## Withdrawal
+
+When a lender deposits USDC through the ST, they have to specify the amount of tokens and the duration for which their assets will be locked-in. While locked-in, the lender is not allowed to withdraw funds before it reaches maturity. After the maturity date, the lender can withdraw their funds anytime. Withdrawals are subject to available liquidity. When withdrawing funds, the lender returns their ST token which is burned, and the lender receives USDC in return. 
+
+To ensure enough liquidity for withdrawals, only up to 90% of the ST can be borrowed, while 10% will be kept liquid in a pool.
+
+If utilization increases above 98% from withdrawals, withdrawals are halted. Whenever liquidity becomes available again and utilization drops to 90% lender withdrawals are resumed. When withdrawing from the pool is made, the latest exchange rate of the ST Token is used. 

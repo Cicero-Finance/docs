@@ -1,0 +1,45 @@
+---
+title: "Loan origination on Cicero"
+description: "This page describes the process behind borrowing"
+sidebarTitle: "Loans"
+icon: "landmark"
+---
+
+## Create loan
+
+Cicero operates with pre-approved borrowers. If for whatever reason these borrowers are negligent in their duties of repaying the loans, or other, the DAO may choose to remove their whitelisting. Any of these borrowers can create a loan at any time that directly goes to voting. 
+
+Borrowers complete the following information about to create a loan:
+
+* Size (in stablecoins)
+* Maturity date
+* Repayment schedule (30,60,120 days)
+* APR
+* Stablecoin (token address). Only USDC is supported at this time.
+
+## Activation
+
+Once approved by the DAO, the loan becomes public and is supplied with liquidity from JT (20%) and ST (80%) respectively. After the loan is activated, the borrower will receive the funds in their wallet address. The loan can’t be approved if there is not enough liquidity in the pools.
+
+## Repayment
+
+As part of the terms, the borrower has to repay the loan according to their repayment schedule. The loan must be completely repaid before the maturity date. Borrowers are still left with the option to repay everything and close the pool before the maturity date. However, the repayment interest will be calculated for the entire duration of the loan. 
+
+### Penalty
+
+If the borrower is not able to follow his repayment schedule and the loan is overdue, the protocol will begin to accrue penalty interest every second in the form of an additional 15% APR. Borrowers have a notice period of 5 days after the repayment schedule before the penalty interest begins to accrue. The Governance defines penalty interest percentage.
+
+### Hierarchal Repayment Order
+
+The repayment happens in the following order:
+
+1. ST is paid its principal amount
+2. ST is paid its interest
+3. ILP is paid its fees
+4. Treasury is paid its fees
+5. JT is paid its principal
+6. JT is paid its interest
+
+## Loan Default
+
+If the borrower fails to repay the loan 20 days after the repayment schedule, the loan will enter a Default state. When Default is triggered, the loan insurance process is initiated. 20% of the loan size is covered by remaining JT funds and the rest is covered by the ILP. If ILP is not able to cover the loan within a healthy limit, ST will acknowledge the losses. 
