@@ -4,3 +4,25 @@ description: "Explore Cicero liquidity pool types and how they work"
 sidebarTitle: "Pools"
 icon: "gear"
 ---
+
+Protocol operates with 3 proxy pools and a single liquidity pool (single address) called Vault. All of which are codependent. Incentives for capital efficiency in these pools are dynamic and based on the protocol's needs. The deposits from all 3 pools are directly transferred to the Vault.&#x20;
+
+These are the supported proxy pools:
+
+<Card title="Insurance Liquidity Pool (ILP)" icon="shield" horizontal={false} href="https://docs.cicero.network/pools/ilp">
+  The ILP is where protocol participants stake their CICERO tokens to become DAO members. Additionally, to staking, participants can also deposit USDC and earn a yield on it. ILP earns by collecting protocol fees and its purpose is to insure the SP during default.
+</Card>
+
+<Card title="Serion Tranche (ST)" icon="certificate" href="https://docs.cicero.network/pools/st">
+  The ST is a liquidity pool that covers the extra principal (80% of the loan size) required for loan origination once the JT target (20% of the loan size) is met. All deposits in the ST are insured by ILP. 
+</Card>
+
+<Card title="Junior Tranche (JT)" icon="diamond" href="https://docs.cicero.network/pools/jt">
+  JT pool is used to kickstart the loan and cover the initial liquidity required for origination. Once a loan is created and approved, the minimum target of 20% of the loan size is immediately provided by JT with the ST following up with the remaining 80%.
+</Card>
+
+## About Vault
+
+The vault stores the balance of deposits coming from all 3 proxy pools on its address while keeping track of individual pool deposits independently. Users can always view the current balance collected from an individual pool.&#x20;
+
+In addition to deposits, the vault also tracks and stores the interest accrued by individual pools following the proportions defined by the governance.
